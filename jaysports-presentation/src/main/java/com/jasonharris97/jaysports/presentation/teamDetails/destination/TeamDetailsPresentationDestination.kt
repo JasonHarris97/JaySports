@@ -1,0 +1,5 @@
+package com.jasonharris97.jaysports.presentation.teamDetails.destination
+
+import com.jasonharris97.jaysports.presentation.core.model.PresentationDestination
+
+sealed interface TeamDetailsPresentationDestination : PresentationDestination
