@@ -5,7 +5,7 @@ import kotlinx.coroutines.withContext
 
 abstract class BackgroundExecutingUseCase<REQUEST, RESULT>(
     private val coroutineContextProvider: CoroutineContextProvider
-) : BaseUseCase<REQUEST, RESULT> {
+) : UseCase<REQUEST, RESULT> {
     final override suspend fun execute(
         input: REQUEST,
         onResult: (RESULT) -> Unit

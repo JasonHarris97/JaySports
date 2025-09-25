@@ -1,5 +1,7 @@
 package com.jasonharris97.jaysports.domain.core.usecase
 
+import com.jasonharris97.jaysports.domain.core.exception.DomainException
+import com.jasonharris97.jaysports.domain.core.exception.UnknownDomainException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlin.coroutines.cancellation.CancellationException
@@ -8,7 +10,7 @@ class UseCaseExecutor(
     private val coroutineScope: CoroutineScope
 ) {
     fun <OUTPUT> execute(
-        useCase: BaseUseCase<Unit, OUTPUT>,
+        useCase: UseCase<Unit, OUTPUT>,
         onSuccess: (OUTPUT) -> Unit = {},
         onException: (DomainException) -> Unit = {}
     ) {
@@ -16,7 +18,7 @@ class UseCaseExecutor(
     }
 
     fun <INPUT, OUTPUT> execute(
-        useCase: BaseUseCase<INPUT, OUTPUT>,
+        useCase: UseCase<INPUT, OUTPUT>,
         value: INPUT,
         onSuccess: (OUTPUT) -> Unit = {},
         onException: (DomainException) -> Unit = {}

@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "JaySports"
 include(":app")
 include(":jaysports-domain")
+include(":jaysports-presentation")

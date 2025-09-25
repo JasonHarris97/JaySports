@@ -12,6 +12,6 @@ class SearchTeamsUseCase(
     coroutineContextProvider
 ){
     override fun executeInBackground(request: String): List<TeamDomainModel> {
-       teamDetailsRepository.getTeams(request)
+       return teamDetailsRepository.getTeams(query = request)
     }
 }
