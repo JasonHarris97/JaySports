@@ -1,4 +1,4 @@
-package com.jasonharris97.jaysports.presentation.searchTeams.destination
+package com.jasonharris97.jaysports.presentation.searchTeams.navigation
 
 import com.jasonharris97.jaysports.presentation.core.model.PresentationDestination
 

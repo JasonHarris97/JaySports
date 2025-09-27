@@ -3,12 +3,10 @@ package com.jasonharris97.jaysports.presentation.searchTeams.viewmodel
 import com.jasonharris97.jaysports.domain.core.usecase.UseCaseExecutor
 import com.jasonharris97.jaysports.domain.searchTeams.model.TeamDomainModel
 import com.jasonharris97.jaysports.domain.searchTeams.usecase.SearchTeamsUseCase
-import com.jasonharris97.jaysports.domain.teamDetails.usecase.GetTeamDetailsUseCase
 import com.jasonharris97.jaysports.presentation.core.viewmodel.BaseViewModel
 import com.jasonharris97.jaysports.presentation.searchTeams.mapper.TeamDomainToPresentationMapper
-import com.jasonharris97.jaysports.presentation.searchTeams.destination.SearchTeamsPresentationDestination
+import com.jasonharris97.jaysports.presentation.searchTeams.navigation.SearchTeamsPresentationDestination
 import com.jasonharris97.jaysports.presentation.searchTeams.model.SearchTeamsViewState
-import com.jasonharris97.jaysports.presentation.teamDetails.mapper.TeamDetailsDomainToPresentationMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import javax.inject.Inject
