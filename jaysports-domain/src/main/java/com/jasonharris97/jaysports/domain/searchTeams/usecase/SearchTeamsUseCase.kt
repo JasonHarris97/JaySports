@@ -6,12 +6,12 @@ import com.jasonharris97.jaysports.domain.searchTeams.model.TeamDomainModel
 import com.jasonharris97.jaysports.domain.searchTeams.repository.TeamsRepository
 
 class SearchTeamsUseCase(
-    private val teamDetailsRepository: TeamsRepository,
+    private val teamsRepository: TeamsRepository,
     coroutineContextProvider: CoroutineContextProvider,
 ) : BackgroundExecutingUseCase<String, List<TeamDomainModel>>(
     coroutineContextProvider
 ){
     override fun executeInBackground(request: String): List<TeamDomainModel> {
-       return teamDetailsRepository.getTeams(query = request)
+       return teamsRepository.getTeams(query = request)
     }
 }

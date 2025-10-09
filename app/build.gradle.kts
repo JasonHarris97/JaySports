@@ -59,5 +59,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    //implementation(project(":jaysports-datasource"))
+    //implementation(project(":jaysports-data"))
+    implementation(project(":jaysports-domain"))
+    implementation(project(":jaysports-presentation"))
     implementation(project(":jaysports-ui"))
 }

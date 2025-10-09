@@ -58,4 +58,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     androidTestImplementation(platform(libs.androidx.compose.bom))
+
+    implementation(libs.androidx.fragment.ktx)
+
+    implementation(project(":jaysports-presentation"))
 }

@@ -23,7 +23,7 @@ class SearchTeamsViewModel @Inject constructor(
     }
 
     fun onSearchQueryChanged(query: String) {
-        updateViewState(SearchTeamsViewState::loading)
+        updateViewState { newSearch(query) }
         execute(
             useCase = searchTeamsUseCase,
             value = query,
